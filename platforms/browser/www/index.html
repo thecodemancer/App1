@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="google" value="notranslate">
+<link rel="shortcut icon" href="img/logodwconsulware.ico">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="js/jquery.mobile.theme-1.4.5.min.css">
+<link rel="stylesheet" href="js/jquery.mobile.structure-1.4.5.min.css">
+<!--
+-->
+	<script type="application/javascript" src="cordova.js"></script>
+<!--
+-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script type="application/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="application/javascript">
+$(document).ready(function(){
+	function camSucess(imgData){
+		$('#imgcamPH').attr("src", imgData)
+	}
+	function camError(error){
+		alert( error );
+	}
+	function accessCamera(imgData){
+		var options = {
+			destinationType: Camera.DestinationType.FILE_URI,
+			sourceType: Camera.PictureSourceType.Camera//PHOTOGALLERY
+		};
+
+		navigator.camera.getPicture( camSuccess, camError, options );
+
+	}
+
+	$("#btn_camera").on('click', accessCamera);
+
+});
+
+</script>
+
+	<title id="title">hola mundo</title>
+	
+</head>
+<body>
+	<div data-role='page'>
+		<div class='container'>
+			<div data-role='header'>
+				<h1>DWConsulware</h1>
+			</div>
+			<p>Esta es una prueba para el APP</p>
+			<img src='img/logodwconsulwareazul.gif' />
+		</div>
+		<div class='ui-content'>
+			<button class="ui-btn" id='btn_camera'>Cámara</button>
+			<img id='imgcamPH' />	
+		</div>
+	</div>
+	
+	</body>
+
+</html>

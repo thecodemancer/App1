@@ -1,0 +1,27 @@
+body{
+	/*background: #000
+	*/
+}
+
+H1{
+	color:#1A92D0;
+}
+img{
+width: 100%;
+height: auto;
+
+}
+
+.container{
+	width: 214px;
+	margin:0 auto;
+	height: auto
+}
+.center{
+	margin:0 auto;
+	text-align: center;
+}
+
+.logo{
+
+}
